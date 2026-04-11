@@ -18,14 +18,21 @@
             <span class="logo-bracket">}</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#features">Можливості</a></li>
-            <li><a href="#how-it-works">Як працює</a></li>
-            <li><a href="#usage">Використання</a></li>
-            <li><a href="#download" class="btn-nav">Завантажити</a></li>
+            <li><a href="#features" data-uk="Можливості" data-en="Features">Можливості</a></li>
+            <li><a href="#how-it-works" data-uk="Як працює" data-en="How it works">Як працює</a></li>
+            <li><a href="#usage" data-uk="Використання" data-en="Usage">Використання</a></li>
+            <li><a href="#donate" data-uk="Підтримати" data-en="Donate">Підтримати</a></li>
+            <li><a href="#download" class="btn-nav" data-uk="Завантажити" data-en="Download">Завантажити</a></li>
         </ul>
-        <button class="burger" aria-label="Меню">
-            <span></span><span></span><span></span>
-        </button>
+        <div class="nav-right">
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-flag">🇬🇧</span>
+                <span class="lang-code">EN</span>
+            </button>
+            <button class="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 </header>
 
@@ -37,18 +44,23 @@
     <div class="container hero-content">
         <div class="terminal-badge">~ $ ./formulyword</div>
         <h1>
-            Розпізнай формулу з <span class="highlight">фото</span><br>
-            та вставляй у <span class="highlight">Word</span>
+            <span data-uk="Розпізнай формулу з" data-en="Recognize formulas from">Розпізнай формулу з</span>
+            <span class="highlight" data-uk="фото" data-en="photos">фото</span><br>
+            <span data-uk="та вставляй у" data-en="and insert into">та вставляй у</span>
+            <span class="highlight">Word</span>
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub" data-uk="Нейромережа розпізнає математичну формулу із зображення та вставляє її у Word-документ як <strong>нативний об'єкт</strong> — не картинку. Безкоштовно та open-source." data-en="Neural network recognizes math formulas from images and inserts them into Word documents as <strong>native equation objects</strong> — not pictures. Free and open-source.">
             Нейромережа розпізнає математичну формулу із зображення та вставляє її у Word-документ
             як <strong>нативний об'єкт</strong> — не картинку. Безкоштовно та open-source.
         </p>
         <div class="hero-buttons">
             <a href="#download" class="btn btn-primary">
-                <span class="btn-icon">↓</span> Завантажити .exe
+                <span class="btn-icon">↓</span>
+                <span data-uk="Завантажити .exe" data-en="Download .exe">Завантажити .exe</span>
             </a>
-            <a href="#how-it-works" class="btn btn-outline">Дізнатися більше</a>
+            <a href="#how-it-works" class="btn btn-outline">
+                <span data-uk="Дізнатися більше" data-en="Learn more">Дізнатися більше</span>
+            </a>
         </div>
         <div class="hero-stats">
             <div class="stat">
@@ -62,7 +74,7 @@
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
-                <span class="stat-value">2 мови</span>
+                <span class="stat-value" data-uk="2 мови" data-en="2 langs">2 мови</span>
                 <span class="stat-label">UA / EN</span>
             </div>
         </div>
@@ -73,38 +85,38 @@
 <section id="features" class="section">
     <div class="container">
         <h2 class="section-title">
-            <span class="comment">// </span>Можливості
+            <span class="comment">// </span><span data-uk="Можливості" data-en="Features">Можливості</span>
         </h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">📷</div>
-                <h3>Розпізнавання з фото</h3>
-                <p>Відкрийте зображення або вставте скріншот з буфера обміну. Виділіть мишкою потрібну формулу.</p>
+                <h3 data-uk="Розпізнавання з фото" data-en="Photo recognition">Розпізнавання з фото</h3>
+                <p data-uk="Відкрийте зображення або вставте скріншот з буфера обміну. Виділіть мишкою потрібну формулу." data-en="Open an image or paste a screenshot from clipboard. Select the formula with your mouse.">Відкрийте зображення або вставте скріншот з буфера обміну. Виділіть мишкою потрібну формулу.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🧠</div>
-                <h3>Нейромережа pix2tex</h3>
-                <p>AI-модель розпізнає формулу та повертає точний LaTeX-код. Підтримує складні математичні вирази.</p>
+                <h3 data-uk="Нейромережа pix2tex" data-en="pix2tex Neural Network">Нейромережа pix2tex</h3>
+                <p data-uk="AI-модель розпізнає формулу та повертає точний LaTeX-код. Підтримує складні математичні вирази." data-en="AI model recognizes formulas and returns accurate LaTeX code. Supports complex math expressions.">AI-модель розпізнає формулу та повертає точний LaTeX-код. Підтримує складні математичні вирази.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">⌨️</div>
-                <h3>Ручне введення LaTeX</h3>
-                <p>Введіть або відредагуйте формулу вручну. Миттєвий перегляд результату перед збереженням.</p>
+                <h3 data-uk="Ручне введення LaTeX" data-en="Manual LaTeX input">Ручне введення LaTeX</h3>
+                <p data-uk="Введіть або відредагуйте формулу вручну. Миттєвий перегляд результату перед збереженням." data-en="Type or edit a formula manually. Instant preview before saving.">Введіть або відредагуйте формулу вручну. Миттєвий перегляд результату перед збереженням.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📋</div>
-                <h3>Копіювання у Word</h3>
-                <p>Скопіюйте формулу в буфер обміну та вставте у Word через Ctrl+V як нативну формулу.</p>
+                <h3 data-uk="Копіювання у Word" data-en="Copy to Word">Копіювання у Word</h3>
+                <p data-uk="Скопіюйте формулу в буфер обміну та вставте у Word через Ctrl+V як нативну формулу." data-en="Copy formula to clipboard and paste into Word via Ctrl+V as a native equation.">Скопіюйте формулу в буфер обміну та вставте у Word через Ctrl+V як нативну формулу.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💾</div>
-                <h3>Збереження у .docx</h3>
-                <p>Збережіть одну або кілька формул у Word-файл. Підтримується пакетний режим.</p>
+                <h3 data-uk="Збереження у .docx" data-en="Save to .docx">Збереження у .docx</h3>
+                <p data-uk="Збережіть одну або кілька формул у Word-файл. Підтримується пакетний режим." data-en="Save one or multiple formulas to a Word file. Batch mode supported.">Збережіть одну або кілька формул у Word-файл. Підтримується пакетний режим.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🌐</div>
-                <h3>Двомовний інтерфейс</h3>
-                <p>Українська та англійська мови. Перемикання одним кліком у верхньому правому куті.</p>
+                <h3 data-uk="Двомовний інтерфейс" data-en="Bilingual UI">Двомовний інтерфейс</h3>
+                <p data-uk="Українська та англійська мови. Перемикання одним кліком." data-en="Ukrainian and English languages. One-click toggle.">Українська та англійська мови. Перемикання одним кліком.</p>
             </div>
         </div>
     </div>
@@ -114,14 +126,14 @@
 <section id="how-it-works" class="section section-alt">
     <div class="container">
         <h2 class="section-title">
-            <span class="comment">// </span>Як це працює
+            <span class="comment">// </span><span data-uk="Як це працює" data-en="How it works">Як це працює</span>
         </h2>
         <div class="pipeline">
             <div class="pipeline-step">
                 <div class="step-number">01</div>
                 <div class="step-content">
-                    <h3>Зображення</h3>
-                    <p>Завантажте фото з формулою або вставте скріншот з буфера обміну</p>
+                    <h3 data-uk="Зображення" data-en="Image">Зображення</h3>
+                    <p data-uk="Завантажте фото з формулою або вставте скріншот з буфера обміну" data-en="Upload a photo with a formula or paste a screenshot from clipboard">Завантажте фото з формулою або вставте скріншот з буфера обміну</p>
                 </div>
             </div>
             <div class="pipeline-arrow">→</div>
@@ -129,7 +141,7 @@
                 <div class="step-number">02</div>
                 <div class="step-content">
                     <h3>LaTeX (OCR)</h3>
-                    <p>Нейромережа <code>pix2tex</code> розпізнає формулу та перетворює на LaTeX-код</p>
+                    <p data-uk="Нейромережа <code>pix2tex</code> розпізнає формулу та перетворює на LaTeX-код" data-en="Neural network <code>pix2tex</code> recognizes the formula and converts to LaTeX code">Нейромережа <code>pix2tex</code> розпізнає формулу та перетворює на LaTeX-код</p>
                 </div>
             </div>
             <div class="pipeline-arrow">→</div>
@@ -137,20 +149,19 @@
                 <div class="step-number">03</div>
                 <div class="step-content">
                     <h3>MathML → OMML</h3>
-                    <p><code>latex2mathml</code> + Microsoft XSLT трансформація у Office Math Markup</p>
+                    <p data-uk="<code>latex2mathml</code> + Microsoft XSLT трансформація у Office Math Markup" data-en="<code>latex2mathml</code> + Microsoft XSLT transformation to Office Math Markup"><code>latex2mathml</code> + Microsoft XSLT трансформація у Office Math Markup</p>
                 </div>
             </div>
             <div class="pipeline-arrow">→</div>
             <div class="pipeline-step">
                 <div class="step-number">04</div>
                 <div class="step-content">
-                    <h3>Word документ</h3>
-                    <p><code>python-docx</code> вставляє OMML як нативну формулу Word</p>
+                    <h3 data-uk="Word документ" data-en="Word document">Word документ</h3>
+                    <p data-uk="<code>python-docx</code> вставляє OMML як нативну формулу Word" data-en="<code>python-docx</code> inserts OMML as a native Word equation"><code>python-docx</code> вставляє OMML як нативну формулу Word</p>
                 </div>
             </div>
         </div>
 
-        <!-- Code block illustration -->
         <div class="code-block">
             <div class="code-header">
                 <span class="code-dot red"></span>
@@ -158,7 +169,7 @@
                 <span class="code-dot green"></span>
                 <span class="code-title">pipeline.py</span>
             </div>
-            <pre><code><span class="code-comment"># Конвеєр перетворення формули</span>
+            <pre><code><span class="code-comment"># Formula conversion pipeline</span>
 <span class="code-keyword">from</span> pix2tex <span class="code-keyword">import</span> LatexOCR
 <span class="code-keyword">import</span> latex2mathml.converter
 
@@ -175,58 +186,28 @@ doc    = insert_to_word(omml)       <span class="code-comment"># native equation
 <section id="usage" class="section">
     <div class="container">
         <h2 class="section-title">
-            <span class="comment">// </span>Використання
+            <span class="comment">// </span><span data-uk="Використання" data-en="Usage">Використання</span>
         </h2>
         <div class="usage-tabs">
-            <div class="usage-tab active" data-tab="photo">Розпізнати з фото</div>
-            <div class="usage-tab" data-tab="latex">Ввести LaTeX</div>
+            <div class="usage-tab active" data-tab="photo" data-uk="Розпізнати з фото" data-en="Recognize from photo">Розпізнати з фото</div>
+            <div class="usage-tab" data-tab="latex" data-uk="Ввести LaTeX" data-en="Enter LaTeX">Ввести LaTeX</div>
         </div>
         <div class="usage-content active" id="tab-photo">
             <ol class="usage-steps">
-                <li>
-                    <span class="step-mark">$</span>
-                    Натисніть <strong>«Відкрити фото»</strong> або <strong>«Вставити з буфера»</strong> (для скріншотів)
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    Виділіть мишкою <strong>одну формулу</strong> на зображенні
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    Натисніть <strong>«Розпізнати»</strong> — програма поверне LaTeX-код
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    Перевірте та відредагуйте LaTeX у текстовому полі
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    <strong>«Перевірити»</strong> — побачите прев&#39;ю формули
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    <strong>«Зберегти у Word»</strong> або <strong>«Копіювати формулу»</strong> (Ctrl+V у Word)
-                </li>
+                <li><span class="step-mark">$</span><span data-uk='Натисніть <strong>«Відкрити фото»</strong> або <strong>«Вставити з буфера»</strong> (для скріншотів)' data-en='Click <strong>"Open photo"</strong> or <strong>"Paste from clipboard"</strong> (for screenshots)'>Натисніть <strong>«Відкрити фото»</strong> або <strong>«Вставити з буфера»</strong> (для скріншотів)</span></li>
+                <li><span class="step-mark">$</span><span data-uk='Виділіть мишкою <strong>одну формулу</strong> на зображенні' data-en='Select <strong>one formula</strong> with your mouse on the image'>Виділіть мишкою <strong>одну формулу</strong> на зображенні</span></li>
+                <li><span class="step-mark">$</span><span data-uk='Натисніть <strong>«Розпізнати»</strong> — програма поверне LaTeX-код' data-en='Click <strong>"Recognize"</strong> — the program returns LaTeX code'>Натисніть <strong>«Розпізнати»</strong> — програма поверне LaTeX-код</span></li>
+                <li><span class="step-mark">$</span><span data-uk="Перевірте та відредагуйте LaTeX у текстовому полі" data-en="Review and edit LaTeX in the text field">Перевірте та відредагуйте LaTeX у текстовому полі</span></li>
+                <li><span class="step-mark">$</span><span data-uk="<strong>«Перевірити»</strong> — побачите прев'ю формули" data-en='<strong>"Preview"</strong> — see how the formula looks'><strong>«Перевірити»</strong> — побачите прев'ю формули</span></li>
+                <li><span class="step-mark">$</span><span data-uk='<strong>«Зберегти у Word»</strong> або <strong>«Копіювати формулу»</strong> (Ctrl+V у Word)' data-en='<strong>"Save to Word"</strong> or <strong>"Copy formula"</strong> (Ctrl+V in Word)'><strong>«Зберегти у Word»</strong> або <strong>«Копіювати формулу»</strong> (Ctrl+V у Word)</span></li>
             </ol>
         </div>
         <div class="usage-content" id="tab-latex">
             <ol class="usage-steps">
-                <li>
-                    <span class="step-mark">$</span>
-                    Введіть LaTeX-формулу вручну в текстове поле
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    Натисніть <strong>«Перевірити»</strong> для перегляду
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    <strong>«Зберегти у Word»</strong> або <strong>«Копіювати формулу»</strong>
-                </li>
-                <li>
-                    <span class="step-mark">$</span>
-                    <strong>Пакетний режим:</strong> додайте кілька формул кнопкою «До списку», потім збережіть усі разом
-                </li>
+                <li><span class="step-mark">$</span><span data-uk="Введіть LaTeX-формулу вручну в текстове поле" data-en="Type a LaTeX formula manually in the text field">Введіть LaTeX-формулу вручну в текстове поле</span></li>
+                <li><span class="step-mark">$</span><span data-uk='Натисніть <strong>«Перевірити»</strong> для перегляду' data-en='Click <strong>"Preview"</strong> to check'>Натисніть <strong>«Перевірити»</strong> для перегляду</span></li>
+                <li><span class="step-mark">$</span><span data-uk='<strong>«Зберегти у Word»</strong> або <strong>«Копіювати формулу»</strong>' data-en='<strong>"Save to Word"</strong> or <strong>"Copy formula"</strong>'><strong>«Зберегти у Word»</strong> або <strong>«Копіювати формулу»</strong></span></li>
+                <li><span class="step-mark">$</span><span data-uk='<strong>Пакетний режим:</strong> додайте кілька формул кнопкою «До списку», потім збережіть усі разом' data-en='<strong>Batch mode:</strong> add multiple formulas via "Add to list", then save all at once'><strong>Пакетний режим:</strong> додайте кілька формул кнопкою «До списку», потім збережіть усі разом</span></li>
             </ol>
         </div>
     </div>
@@ -236,23 +217,23 @@ doc    = insert_to_word(omml)       <span class="code-comment"># native equation
 <section class="section section-alt">
     <div class="container">
         <h2 class="section-title">
-            <span class="comment">// </span>Вимоги
+            <span class="comment">// </span><span data-uk="Вимоги" data-en="Requirements">Вимоги</span>
         </h2>
         <div class="requirements-grid">
             <div class="req-card">
                 <div class="req-icon">🖥️</div>
                 <h3>Windows</h3>
-                <p>Портативна .exe версія — встановлення Python не потрібне</p>
+                <p data-uk="Портативна .exe версія — встановлення Python не потрібне" data-en="Portable .exe version — no Python installation needed">Портативна .exe версія — встановлення Python не потрібне</p>
             </div>
             <div class="req-card">
                 <div class="req-icon">📎</div>
                 <h3>Microsoft Office</h3>
-                <p>Потрібен файл <code>MML2OMML.XSL</code>, який постачається з Office</p>
+                <p data-uk="Потрібен файл <code>MML2OMML.XSL</code>, який постачається з Office" data-en="Requires <code>MML2OMML.XSL</code> file, shipped with Office">Потрібен файл <code>MML2OMML.XSL</code>, який постачається з Office</p>
             </div>
             <div class="req-card">
                 <div class="req-icon">🌍</div>
-                <h3>Інтернет</h3>
-                <p>Тільки для першого запуску — завантажується модель OCR (~500 МБ)</p>
+                <h3 data-uk="Інтернет" data-en="Internet">Інтернет</h3>
+                <p data-uk="Тільки для першого запуску — завантажується модель OCR (~500 МБ)" data-en="Only for first launch — downloads OCR model (~500 MB)">Тільки для першого запуску — завантажується модель OCR (~500 МБ)</p>
             </div>
         </div>
     </div>
@@ -262,12 +243,12 @@ doc    = insert_to_word(omml)       <span class="code-comment"># native equation
 <section id="download" class="section section-download">
     <div class="container">
         <h2 class="section-title">
-            <span class="comment">// </span>Завантажити
+            <span class="comment">// </span><span data-uk="Завантажити" data-en="Download">Завантажити</span>
         </h2>
         <div class="download-box">
             <div class="download-info">
                 <h3>FormulyWord.exe</h3>
-                <p>Портативна версія — просто запустіть .exe файл. Встановлення не потрібне.</p>
+                <p data-uk="Портативна версія — просто запустіть .exe файл. Встановлення не потрібне." data-en="Portable version — just run the .exe file. No installation needed.">Портативна версія — просто запустіть .exe файл. Встановлення не потрібне.</p>
                 <div class="download-meta">
                     <span><code>Windows 10/11</code></span>
                     <span><code>Portable</code></span>
@@ -276,18 +257,68 @@ doc    = insert_to_word(omml)       <span class="code-comment"># native equation
             </div>
             <a href="https://drive.google.com/drive/folders/1coqkFN6xLW1JOtSJV9wmMclEwwaBSRx2?usp=sharing"
                class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
-                <span class="btn-icon">↓</span> Завантажити з Google Drive
+                <span class="btn-icon">↓</span>
+                <span data-uk="Завантажити з Google Drive" data-en="Download from Google Drive">Завантажити з Google Drive</span>
             </a>
         </div>
 
-        <!-- Video placeholder -->
         <div class="video-placeholder" id="video">
             <div class="video-inner">
                 <div class="play-icon">▶</div>
-                <p>Тут буде відео-демонстрація роботи програми</p>
-                <span class="video-hint"><!-- Замініть цей блок на iframe з YouTube --></span>
+                <p data-uk="Тут буде відео-демонстрація роботи програми" data-en="Video demonstration will be here">Тут буде відео-демонстрація роботи програми</p>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ===== DONATE ===== -->
+<section id="donate" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="comment">// </span><span data-uk="Підтримати проєкт" data-en="Support the project">Підтримати проєкт</span>
+        </h2>
+        <p class="donate-subtitle" data-uk="FormulyWord — безкоштовний та open-source. Якщо програма вам корисна, ви можете підтримати розробку:" data-en="FormulyWord is free and open-source. If you find it useful, you can support development:">
+            FormulyWord — безкоштовний та open-source. Якщо програма вам корисна, ви можете підтримати розробку:
+        </p>
+        <div class="donate-grid">
+            <div class="donate-card">
+                <div class="donate-icon">☕</div>
+                <h3>Buy Me a Coffee</h3>
+                <p data-uk="Міжнародні платежі — Visa, Mastercard, Apple Pay, Google Pay" data-en="International payments — Visa, Mastercard, Apple Pay, Google Pay">Міжнародні платежі — Visa, Mastercard, Apple Pay, Google Pay</p>
+                <div class="donate-badge" data-uk="Для всіх країн" data-en="All countries">Для всіх країн</div>
+                <!-- TODO: Замініть YOUR_USERNAME на ваш buymeacoffee.com username -->
+                <a href="https://buymeacoffee.com/YOUR_USERNAME" class="btn btn-donate btn-coffee" target="_blank" rel="noopener noreferrer">
+                    <span>☕</span>
+                    <span data-uk="Купити каву" data-en="Buy me a coffee">Купити каву</span>
+                </a>
+            </div>
+            <div class="donate-card donate-card-featured">
+                <div class="donate-featured-label" data-uk="Рекомендовано" data-en="Recommended">Рекомендовано</div>
+                <div class="donate-icon">🏦</div>
+                <h3 data-uk="Монобанка" data-en="Monobank Jar">Монобанка</h3>
+                <p data-uk="Для українських карток — 0% комісії. Моментальний переказ." data-en="For Ukrainian cards — 0% fees. Instant transfer via monobank.">Для українських карток — 0% комісії. Моментальний переказ.</p>
+                <div class="donate-badge" data-uk="0% комісії 🇺🇦" data-en="0% fees 🇺🇦">0% комісії 🇺🇦</div>
+                <!-- TODO: Замініть YOUR_JAR_ID на ID вашої монобанки -->
+                <a href="https://send.monobank.ua/jar/YOUR_JAR_ID" class="btn btn-donate btn-mono" target="_blank" rel="noopener noreferrer">
+                    <span>💳</span>
+                    <span data-uk="Задонатити" data-en="Donate">Задонатити</span>
+                </a>
+            </div>
+            <div class="donate-card">
+                <div class="donate-icon">💸</div>
+                <h3>PayPal</h3>
+                <p data-uk="Класичний спосіб — PayPal-переказ на будь-яку суму." data-en="Classic method — PayPal transfer of any amount.">Класичний спосіб — PayPal-переказ на будь-яку суму.</p>
+                <div class="donate-badge" data-uk="Для всіх країн" data-en="All countries">Для всіх країн</div>
+                <!-- TODO: Замініть YOUR_PAYPAL на ваш PayPal.me username -->
+                <a href="https://paypal.me/YOUR_PAYPAL" class="btn btn-donate btn-paypal" target="_blank" rel="noopener noreferrer">
+                    <span>💸</span>
+                    <span data-uk="PayPal переказ" data-en="PayPal transfer">PayPal переказ</span>
+                </a>
+            </div>
+        </div>
+        <p class="donate-thanks" data-uk="Дякуємо за підтримку! Кожен донат допомагає покращувати програму ❤️" data-en="Thank you for your support! Every donation helps improve the program ❤️">
+            Дякуємо за підтримку! Кожен донат допомагає покращувати програму ❤️
+        </p>
     </div>
 </section>
 
@@ -299,7 +330,7 @@ doc    = insert_to_word(omml)       <span class="code-comment"># native equation
             <span class="logo-text">FormulyWord</span>
             <span class="logo-bracket">}</span>
         </div>
-        <p class="footer-text">
+        <p class="footer-text" data-uk="Open-source проєкт &bull; Створено з ❤️ для студентів та науковців" data-en="Open-source project &bull; Made with ❤️ for students and researchers">
             Open-source проєкт &bull; Створено з ❤️ для студентів та науковців
         </p>
         <p class="footer-copy">&copy; 2025-2026 FormulyWord</p>

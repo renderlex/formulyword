@@ -1,5 +1,58 @@
-// ===== BURGER MENU =====
+// ===== LANGUAGE SYSTEM =====
+let currentLang = 'uk';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    // Update all elements with data-uk / data-en attributes
+    document.querySelectorAll('[data-uk][data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + lang);
+    });
+
+    // Update lang toggle button
+    const toggle = document.getElementById('langToggle');
+    if (toggle) {
+        const flag = toggle.querySelector('.lang-flag');
+        const code = toggle.querySelector('.lang-code');
+        if (lang === 'uk') {
+            flag.textContent = '🇬🇧';
+            code.textContent = 'EN';
+        } else {
+            flag.textContent = '🇺🇦';
+            code.textContent = 'UA';
+        }
+    }
+
+    // Update page title
+    document.title = lang === 'uk'
+        ? 'FormulyWord — Формули з фото у Word'
+        : 'FormulyWord — Formulas from photos to Word';
+
+    // Save preference
+    try { localStorage.setItem('fw-lang', lang); } catch (e) {}
+}
+
+// ===== MAIN INIT =====
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ===== LANGUAGE TOGGLE =====
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            setLanguage(currentLang === 'uk' ? 'en' : 'uk');
+        });
+    }
+
+    // Restore saved language
+    try {
+        const saved = localStorage.getItem('fw-lang');
+        if (saved && (saved === 'en' || saved === 'uk')) {
+            setLanguage(saved);
+        }
+    } catch (e) {}
+
+    // ===== BURGER MENU =====
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -9,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             burger.classList.toggle('active');
         });
 
-        // Close menu on link click
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
@@ -35,12 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== SCROLL ANIMATIONS (Intersection Observer) =====
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
+    // ===== SCROLL ANIMATIONS =====
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -48,26 +95,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.feature-card, .pipeline-step, .req-card, .download-box').forEach(el => {
+    document.querySelectorAll('.feature-card, .pipeline-step, .req-card, .download-box, .donate-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
 
-    // ===== HEADER SHADOW ON SCROLL =====
+    // ===== HEADER SHADOW =====
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 10) {
-            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.4)';
-        } else {
-            header.style.boxShadow = 'none';
-        }
+        header.style.boxShadow = window.scrollY > 10
+            ? '0 4px 20px rgba(0,0,0,0.4)'
+            : 'none';
     });
 
-    // ===== SMOOTH SCROLL for anchor links =====
+    // ===== SMOOTH SCROLL =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
@@ -78,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== TYPING EFFECT for terminal badge =====
+    // ===== TYPING EFFECT =====
     const badge = document.querySelector('.terminal-badge');
     if (badge) {
         const text = badge.textContent;
